@@ -23,6 +23,11 @@ public class BirdJump : MonoBehaviour
 
 // 충돌시 게임 오버
     private void OnCollisionEnter2D(Collision2D other) {
+        if(Score.score > Score.bestscore){
+            Score.bestscore = Score.score;
+        }
+
         SceneManager.LoadScene("GameOverScene");
+    
     }
 }
